@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"><font color="black">#</font></th>
+      <th scope="col"><font color="black">Nume</font></th>
+      <th scope="col"><font color="black">Rating</font></th>
+      <th scope="col"><font color="black">Website</font></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      {%for item in cazare_query%}
+      <th scope="row"><font color="black">{{forloop.counter}}</font></th>
+      <td><font color="black">{{item.nume}}</font></font></td>
+      <td><font color="black">{{item.rating}}</font></td>
+      <td><font color="black"><a href="{{item.website}}">{{item.website}}</a></font></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+
+</table>
+
+
+{% endblock %}

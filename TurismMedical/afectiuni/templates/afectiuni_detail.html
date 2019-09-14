@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="jumbotron">
+  <font color="black">
+  <h1 class="display-10">Proceduri recomandate pentru {{object.clasificare}}</h1>
+  <ul class="list-group">
+    {%for item in proceduri%}
+  <li class="list-group-item">{{item}}</li>
+    {% endfor %}
+</ul>
+  <p class="lead">Statiunea balneara:{{statiune}}, judetul:{{judet}}</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="{% url 'afectiuni:cazare_detail' pk=statiune_pk %}" role="button">Unitati cazare disponibile</a>
+  </p>
+</font>
+</div>
+
+{% endblock %}

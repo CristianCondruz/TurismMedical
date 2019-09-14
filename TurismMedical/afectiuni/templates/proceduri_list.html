@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>Listare proceduri</h1>
+{% for item in object_list %}
+<ul>
+  <font color="black">{{forloop.counter}}</font>
+  <font color="black">{{item.nume|upper}}</font>
+</ul>
+
+{%endfor%}
+{% endblock %}

@@ -1,0 +1,8 @@
+<form method="POST">
+  {% csrf_token %}
+
+  {{ adaugare_afectiuni_form }}
+  {{ statiuni_balneare_form.as_p }}
+
+  <button type="submit" class="save btn btn-default">Save</button>
+</form>
